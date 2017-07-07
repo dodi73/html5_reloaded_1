@@ -1,12 +1,15 @@
 {
-    "description": "ItFactory HTML reloaded",
-    "name": "html5-reloaded",
-    "version": "1.0.0",
-    "repository": "https://github.com/dodi73/html5_reloaded_1.git",
-    "license": "MIT",
-    "dependencies": {
-        "bootstrap": "*",
-        "jquery": "*",
-        "angularjs": "*"
-    }
+  "description": "ItFactory HTML reloaded",
+  "name": "html5-reloaded",
+  "version": "1.0.0",
+  "repository": "https://github.com/dodi73/html5_reloaded_1.git",
+  "license": "MIT",
+  "dependencies": {
+    "angularjs": "*",
+    "bootstrap": "*",
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "jquery": "*"
+  }
 }
