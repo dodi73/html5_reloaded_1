@@ -5,6 +5,7 @@
   "repository": "https://github.com/dodi73/html5_reloaded_1.git",
   "license": "MIT",
   "dependencies": {
+    "angular": "^1.6.4",
     "angularjs": "*",
     "bootstrap": "*",
     "grunt": "^1.0.1",
