@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
+  // Project configuration és JavaScript tömörítő beállítása.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     uglify: {
@@ -16,7 +16,8 @@ module.exports = function(grunt) {
         dest: 'build/js/<%= pkg.name %>.min.js'
       }
     },
-
+      
+    // CSS-ek tömörítése megadott helyre  
     cssmin: {
         options: {
             mergeIntoShorthands: false,
@@ -24,7 +25,7 @@ module.exports = function(grunt) {
         },
         target: {
             files: {
-                'build/css/output.css': [
+                'build/css/<%= pkg.name %>.min.css': [
                     'node_modules/bootstrap/dist/css/bootstrap.min.css',
                     'ode_modules/bootstrap/dist/css/bootstrap-theme.min.css',
                     'css/**/*.css'                    
@@ -32,7 +33,21 @@ module.exports = function(grunt) {
             }
         }
     },
+    
       
+    // Másolási funkció konfigurálása honnan mit hova 
+    //előtte megadni a munkakönyvtár váltást (cwd)-paraméterben  
+    copy: {
+      main: {
+        expand: true,
+        cwd: 'node_modules/bootstrap/dist/fonts',  
+        src: '**',
+        dest: 'build/fonts'
+      },
+    },      
+      
+      
+    // Figyeli a megadott és megváltozott fileokat  
     watch: {
         scripts: {
             files: ['js/*.js', 'css/**/*.css'],
@@ -42,15 +57,18 @@ module.exports = function(grunt) {
             },
         },
     }  
+      
+      
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');    
   grunt.loadNpmTasks('grunt-contrib-cssmin');        
+  grunt.loadNpmTasks('grunt-contrib-copy');            
 
   // Default task(s).
-  grunt.registerTask('dev', ['uglify', 'cssmin']);
+  grunt.registerTask('dev', ['uglify', 'cssmin', 'copy']);
   grunt.registerTask('default', ['watch']);
 
 };
