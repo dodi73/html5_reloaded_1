@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html data-ng-app="reloaded">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,9 +48,11 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container" data-ng-controller="hello">
         <div class="starter-template">
-            <h1>...</h1>
+            <h1>...
+                <span data-ng-bind="name"></span>!
+            </h1>
             <p class="lead">Now you can start your own project with <a target="_blank" href="http://getbootstrap.com/">Bootstrap 3.3.7</a>. This plugin is a fork from <a href="https://github.com/le717/brackets-html-skeleton#readme">HTML Skeleton</a>.</p>
         </div>
     </div>

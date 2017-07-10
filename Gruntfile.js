@@ -10,6 +10,7 @@ module.exports = function(grunt) {
       build: {
         src: [
             'node_modules/jquery/dist/jquery.min.js',
+            'node_modules/angular/angular.min.js',
             'node_modules/bootstrap/dist/js/bootstrap.min.js',              
             'js/**/*.js'                          
              ],
@@ -61,7 +62,7 @@ module.exports = function(grunt) {
       
   });
 
-  // Load the plugin that provides the "uglify" task.
+  // Load the plugin that provides the "uglify"... task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');    
   grunt.loadNpmTasks('grunt-contrib-cssmin');        
