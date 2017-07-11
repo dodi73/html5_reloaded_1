@@ -1,0 +1,14 @@
+{
+  "name": "html5_reloaded",
+  "description": "ItFactory HTML5 reloaded",
+  "main": "",
+  "authors": [
+    "dodi73/html5_reloaded_1 <dodidaddy@gmail.com>"
+  ],
+  "license": "MIT",
+  "hompage": "https://github.com/dodi73/html5_reloaded_1",
+  "private": true,
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.7.0"
+  }
+}

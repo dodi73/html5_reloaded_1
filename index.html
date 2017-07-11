@@ -20,7 +20,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body data-ng-controller="hello">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -48,12 +48,23 @@
         </div>
     </nav>
 
-    <div class="container" data-ng-controller="hello">
+    <div class="container">
         <div class="starter-template">
             <h1>...
                 <span data-ng-bind="name"></span>!
             </h1>
             <p class="lead">Now you can start your own project with <a target="_blank" href="http://getbootstrap.com/">Bootstrap 3.3.7</a>. This plugin is a fork from <a href="https://github.com/le717/brackets-html-skeleton#readme">HTML Skeleton</a>.</p>
+        </div>
+    </div>
+    
+    <!-- json/user.json kiiratása AngulrJS -el -->
+    <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+            <ul>
+                <li data-ng-repeat="user in users">
+                    {{ user.name }}, {{ user.age }}, {{ user.address }}, {{ user.job }}
+                </li>
+            </ul>
         </div>
     </div>
 

@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Jeffrey",
+        "age": 42,
+        "address": "New York",
+        "job": "programmer"
+    },
+    {
+        "name": "Joe",
+        "age": 44,
+        "address": "Los Angeles",
+        "job": "programmer"
+    },
+    {
+        "name": "Matthew",
+        "age": 17,
+        "address": "Los Anageles",
+        "job": "artist"
+    },
+    {
+        "name": "Monica",
+        "age": 25,
+        "address": "Washington",
+        "job": "sale"
+    },
+    {
+        "name": "Tom",
+        "age": 32,
+        "address": "New York",
+        "job": "manager"
+    },
+    {
+        "name": "Linda",
+        "age": 63,
+        "address": "Pensilvania",
+        "job": "reporter" 
+    }
+]
