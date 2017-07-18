@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="">
+	<head>
+		<title>jQuery</title>
+		<meta charset="UTF-8">
+		<meta name="Author" content="">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">		
+	</head>
+	<body>
+
+        <div class="clearfix">&nbsp;</div>
+        <div class="row">
+           <div class="col-xs-12">
+            <ul>
+                <li>Pisti</li>
+                <li>Rózsa</li>
+                <li>Flóra</li>
+                <li>Józsi</li>
+                <li>Botond</li>
+            </ul>
+            <ul>
+                <li>Pisti</li>
+                <li>Rózsa</li>
+                <li>Flóra</li>
+                <li>Józsi</li>
+                <li>Botond</li>
+            </ul>
+           </div> 
+        </div>
+       
+       
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>             <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script>
+            
+            //Elemek megjelenítése, elrejtése effektekre:
+            var targetLi = $("body .row ul")
+                .eq(0)
+                .find("li")
+                .eq(1)
+                .css({
+                    "color": "blue",
+                    "font-size": "2em",
+                    "text-decoration": "underline"
+                })
+                .html("<b>Ez az új</b>")
+                .slideUp(50)
+                .delay(800)
+                .fadeIn(10000);
+            
+            // Új js file hozzáadása
+            $.getScript('js/teszt.js');
+            
+            // Új elem hozzáadása meglévő elemhez:
+            targetLi.append('<p>Új elem.');
+
+            // Új elem hozzáadása a  szülőhöz, előtte, utána:
+            targetLi.parent().append('<li>Nevem Senki</li>');           targetLi.parent().prepend('<li>Nevem Senki</li>');
+            targetLi
+                .parent()
+                .parent()            
+                .append('<div>Lábléc 1.</div>');
+            
+            //Ha nem tudom ki lesz a szülő elem "parents":
+            targetLi
+                .parents('.col-xs-12').append('<div>Lábléc 2.</div>');
+            
+            
+        </script>
+	</body>
+</html>

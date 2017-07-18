@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Bootstrap CSS használata</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+            <style>
+                .col { 
+                    height: 30px;
+                    background-color: rgba(86,61,124,.15);
+                    border: 1px inset rgba(86,61,124,.2);
+                }
+            </style>
+    </head>
+    
+    <body>
+        <div>&nbsp;</div>
+        <div class="continer">
+            <div class="row">
+                <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-2"></div>
+                <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-2"></div>
+                <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-2"></div>
+                <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-2"></div>
+                <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-2"></div>
+                <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-2"></div>
+                <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-2"></div>
+                <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-2"></div>
+                <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-2"></div>
+                <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-2"></div>
+                <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-2"></div>
+                <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-2"></div>
+            </div>
+            
+            <div>&nbsp;</div>
+            <!-- Offset, eltolás balról -->
+            <div class="row">
+                <div class="col col-xs-4 col-xs-offset-4">
+                </div>
+            </div>
+            
+            <div>&nbsp;</div>
+            
+            <!-- Offset, eltolás balról, mellé ugrik -->
+            <div class="row">
+                <div class="col col-xs-6 col-xs-offset-3"></div>
+                <div class="col col-xs-6 col-xs-offset-3"></div>                
+            </div>
+            
+            <!-- Elrejtés, megjelenítés mérettől függően -->
+            <div class="row">
+                <div class="col col-xs-6 col-xs-offset-3 visible-lg-block"></div>
+            </div>
+
+           <!-- Egymásba ágyazhatóság --> 
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3">
+                    <div class="col col-xs-6"></div>    
+                </div>
+            </div>
+
+            <div>&nbsp;</div>           
+           
+            <!-- Balra húzza, jobbra tolja az elemet 
+                 ha csak pull-right jobbra igazítja, megycseréli az elemeket    -->
+            <div class="row">
+                <div class="col col-xs-6 col-xs-push-1">1. oszlop</div>
+                <div class="col col-xs-6">2. oszlop</div>                
+            </div>
+            
+            <!-- h-elemek fix bootstrap mérettel -->                                  
+            <div class="row">
+                <div class="col col-xs-12">1. oszlop
+                    <h3>Ne csak csináld, értsd is
+                        <small>ez a lényeg</small>
+                    </h3>
+                </div>
+
+            </div>
+                                                                        
+        </div>
+    </body>
+</html>
