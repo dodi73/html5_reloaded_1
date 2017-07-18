@@ -115,6 +115,21 @@ $.fn.modBtn = function(modalId) {
 };
 
 
+// Ikon (repülő) animálása
+$('.glyphicon-plane')
+    .css({
+        'font-size': '24px',
+        'transform': 'rotate(90deg)',
+        'opacity': '0.5',
+        'right': '1000px',
+        'position': 'absolute'
+    })
+    .animate({
+        'opacity': '1',
+        'right': ['10%', 'swing'],
+        'font-size': '80px'
+    }, 1000);
+
 
 
 
